@@ -1,26 +1,261 @@
 @import "tailwindcss";
-
+@import "../../public/fonts/Raleway/stylesheet.css";
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --font-pri: "Raleway";
+    --cl-pri: #1ad598;
+    --cl-second: #052b1e;
+    --cl-text: #050505;
+    --cl-black1: #25272a;
+    --size-hd: 10.4rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+    font-size: 10px !important;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    /* background: var(--background);
+    color: var(--foreground); */
+    font-family: var(--font-pri);
+    color: var(--cl-text);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cl-pri);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: unset !important;
+    background: lightgray;
+}
+
+main {
+    height: 1000svh;
+}
+
+.container {
+    max-width: 144rem;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+}
+
+.container2 {
+    max-width: 162rem;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+}
+
+.btn-linner::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    transition: 0.3s linear;
+    background: linear-gradient(0deg, #1ad598, #1ad598), radial-gradient( 100% 100% at 50% 0%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #53b086 0%, rgba(83, 176, 134, 0.99) 27.5%), radial-gradient( 17.7% 241.79% at 46.95% 25.05%, rgba(84, 171, 177, 0) 0%, rgba(84, 171, 177, 0.409141) 34.38%, rgba(133, 238, 179, 0.71) 51.52%, rgba(84, 171, 177, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.d-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+}
+
+.d-item {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+}
+
+.d-2 {
+    width: calc(100% * 6 / 12);
+}
+
+.d-3 {
+    width: calc(100% * 4 / 12) !important;
+}
+
+.d-6 {
+    width: calc(100% * 2 / 12);
+}
+
+.swiper-slide {
+    height: auto !important;
+}
+
+.swiper-wrapper {
+    height: auto !important;
+}
+
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 2.4rem;
+    bottom: unset !important;
+    left: unset !important;
+    right: unset !important;
+    top: unset !important;
+}
+
+.swiper-pagination-bullet {
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    background: #02ca88 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--cl-pri) !important;
+}
+
+.filter-white {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(14%) saturate(1488%) hue-rotate(181deg) brightness(110%) contrast(100%);
+}
+
+@media screen and (max-width: 1400px) {
+    .d-wrap {
+        margin-left: -1.4rem;
+        margin-right: -1.4rem;
+    }
+    .d-item {
+        padding-left: 1.4rem;
+        padding-right: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .d-wrap {
+        margin-left: -1.2rem;
+        margin-right: -1.2rem;
+    }
+    .d-item {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .d-wrap {
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }
+    .d-item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .d-3 {
+        width: calc(100% * 6 / 12) !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .d-wrap {
+        margin-left: -0.6rem;
+        margin-right: -0.6rem;
+    }
+    .d-item {
+        padding-left: 0.6rem;
+        padding-right: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .box-info {
+        flex-direction: column;
+        align-items: start;
+        margin: unset;
+    }
+    .box-info li {
+        padding: unset;
+        border: unset;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .d-2 {
+        width: 100%;
+    }
+    .d-3 {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+     :root {
+        --size-hd: 8rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .social-link:hover img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(14%) saturate(1488%) hue-rotate(181deg) brightness(110%) contrast(100%) !important;
+    }
+    .btn-linner:hover::before {
+        opacity: 0;
+    }
+    .btn-to-top:hover {
+        background: var(--cl-pri);
+    }
+    .btn-to-top:hover img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(14%) saturate(1488%) hue-rotate(181deg) brightness(110%) contrast(100%);
+    }
+    .linkMore {
+        /* transition: unset !important; */
+    }
+    .linkMore:hover {
+        color: var(--cl-pri);
+    }
+    .linkMore:hover img {
+        filter: brightness(0) saturate(100%) invert(55%) sepia(57%) saturate(562%) hue-rotate(109deg) brightness(109%) contrast(96%);
+    }
+    .btnNavi:hover span {
+        color: var(--cl-pri);
+    }
+    .btnNavi:hover img {
+        filter: brightness(0) saturate(100%) invert(71%) sepia(97%) saturate(1769%) hue-rotate(106deg) brightness(96%) contrast(80%);
+    }
+}
+
+@keyframes nhungNhay {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(5%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.nhungNhay {
+    animation: nhungNhay 2s linear infinite;
+}
+
+.nhungNhay2 {
+    animation: nhungNhay 2s linear infinite reverse;
+}
+
+.bg-linear1 {
+    background: linear-gradient( 77.74deg, #013da0 11.85%, #0142a9 20.65%, #0148b3 29.45%, #024ebc 38.25%, #0254c5 47.05%, #025ace 55.84%, #0261d7 64.64%, #0267e1 73.44%, #036eea 82.24%, #0375f3 91.04%);
+}
+
+.bg-linear2 {
+    background: linear-gradient( 36.82deg, #013da0 2.16%, #0142a9 12.83%, #0148b3 23.51%, #024ebc 34.18%, #0254c5 44.85%, #025ace 55.53%, #0261d7 66.2%, #0267e1 76.87%, #036eea 87.55%, #0375f3 98.22%);
 }
