@@ -60,7 +60,11 @@ export default function Header() {
 
         }
 
+
         window.addEventListener('scroll', handleScroll)
+
+        // Kích hoạt sự kiện scroll ngay khi component mount
+        window.dispatchEvent(new Event("scroll"));
 
         return () => {
             window.removeEventListener('scroll', handleScroll)
@@ -105,12 +109,14 @@ export default function Header() {
         setIsActived((prev: boolean[]) => (prev && prev.length > 0 ? prev.map(() => false) : Array(prev.length).fill(false)));
         // Đóng tất cả dropdown theo index
         $("[id^=dropdown-menu-]").slideUp()
+        document.body.style.overflow = "auto";
+
 
     };
 
     const handleOpenMenuMb = () => {
         setIsOpen(true)
-
+        document.body.style.overflow = "hidden";
     }
 
 
@@ -167,7 +173,7 @@ export default function Header() {
                         </ul>
                         <div className="flex sm:gap-x-[0.8rem] gap-x-[0.4rem]  ">
                             <div className="relative flex flex-col justify-center">
-                                <div className="group peer flex items-center sm:gap-x-[1.2rem] gap-x-[0.6rem] sm:px-[1.2rem] px-[1rem] py-[0.8rem] rounded-[4rem] border-2 border-[#e1e2e2] bg-[#e8e9e9] cursor-pointer">
+                                <div className="langTitle group peer flex items-center sm:gap-x-[1.2rem] gap-x-[0.6rem] sm:px-[1.2rem] px-[1rem] py-[0.8rem] rounded-[4rem] border-2 border-[#e1e2e2] bg-[#e8e9e9] cursor-pointer">
                                     <picture className="w-[2.4rem] h-[2.4rem] rounded-[50%] block shrink-0">
                                         <Image width={100} height={100} src="/images/vi.png" layout="responsive" alt="" className="w-full h-full object-cover" />
                                     </picture>
@@ -178,7 +184,7 @@ export default function Header() {
                                         </span>
                                     </div>
                                 </div>
-                                <ul className="flex flex-col min-w-[5rem] w-full absolute top-[100%] left-[0] bg-white shadow-sm translate-y-[10%] opacity-0 invisible transition duration-300 ease-linear before:content-[''] before:absolute before:w-[100%] before:h-[4rem] before:top-[-3rem] before:bg-transparent peer-hover:translate-y-[0%] peer-hover:opacity-100 peer-hover:visible hover:opacity-100 hover:translate-y-[0%] hover:visible ">
+                                <ul className="flex flex-col min-w-[5rem] w-full absolute top-[100%] left-[0] bg-white shadow-sm translate-y-[10%] opacity-0 invisible transition duration-300 ease-linear before:content-[''] before:absolute before:w-[100%] before:h-[4rem] before:top-[-3rem] before:bg-transparent xl:peer-hover:translate-y-[0%] xl:peer-hover:opacity-100 xl:peer-hover:visible hover:opacity-100 hover:translate-y-[0%] hover:visible">
                                     <li className="border-b border-gray-200">
                                         <a className="p-[1.2rem] font-[500] uppercase bg-white transition duration-300 ease-linear text-[1.6rem] flex items-center justify-center text-nowrap gap-x-[0.8rem] xl:hover:bg-[var(--cl-pri)] xl:hover:text-white" href="">
                                             <span className="w-[2.4rem] h-[2.4rem] rounded-[50%] block shrink-0">
@@ -207,7 +213,7 @@ export default function Header() {
                 </div>
             </header>
             <div className="menu-mb">
-                <div className={`xl:hidden transition duration-800 ease-initial translate-x-[-100%] opacity-0 pointer-events-none  block fixed sm:w-[35rem] w-full bg-white h-full top-0 left-0 z-[1002] ${isOpen && "translate-x-[0%] opacity-100 !pointer-events-auto"} `}>
+                <div className={`xl:hidden transition duration-800 ease-initial translate-x-[-100%] opacity-0 pointer-events-none  block fixed sm:w-[35rem] w-full bg-white h-[100dvh] top-0 left-0 z-[1002] ${isOpen && "translate-x-[0%] opacity-100 !pointer-events-auto"} `}>
                     <div ref={menuWrap} className="flex flex-col justify-between  gap-y-[2.4rem] px-[2.4rem] py-[2.8rem] h-full">
                         <button onClick={handleCloseMenuMb} className="w-[2.8rem] h-[2.8rem] flex items-center justify-center absolute top-0 right-0 bg-red-600">
                             <Image width={100} height={100} src="/images/close.png" alt="" className="w-[80%] h-[80%] object-cover transition duration-300 ease-linear" />

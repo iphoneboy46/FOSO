@@ -7,7 +7,7 @@ export default function BlogLayout({
 }) {
     return (
         <>
-            <main className="pt-[var(--size-hd)]">{children}</main>
+            <main className="pt-[var(--size-hd)] pb-[4rem]">{children}</main>
         </>
     );
 }

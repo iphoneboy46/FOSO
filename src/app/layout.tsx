@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import BackToTop from "./components/BackToTop";
+import ScrollToTop from "./components/ScrollToTop";
 
 export const metadata: Metadata = {
     title: "FOSO SOFT",
@@ -19,6 +20,7 @@ export default function RootLayout({
                 <Header />
                 {children}
                 <BackToTop />
+                <ScrollToTop />
             </body>
         </html>
     );
