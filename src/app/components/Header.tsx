@@ -75,7 +75,7 @@ export default function Header() {
         const totalHeightMbList = (): void => {
             const totalHeight = (menuWrap.current?.clientHeight ?? 0) - (menuBottom.current?.clientHeight ?? 0) - (menuLogoMb.current?.clientHeight ?? 0) - 56 - 48;
 
-            console.log(totalHeight)
+            
             if (menuListMb.current) {
                 menuListMb.current.style.maxHeight = totalHeight + "px"
             }
@@ -92,7 +92,6 @@ export default function Header() {
 
     const handleDropDownMb = (e: React.DragEvent<HTMLDivElement>, index: number): void => {
         e.preventDefault();
-        console.log(index)
         setIsActived((prev) => {
             return {
                 ...prev,
@@ -131,9 +130,9 @@ export default function Header() {
                 <div className="container">
                     <div className="xl:w-fit mx-auto flex justify-between xl:gap-x-[6.4rem] gap-x-[2.4rem] h-[8rem] w-full">
 
-                        <Link className="group flex justify-center items-center relative z-[2]" href="/">
-                            <picture className="xl:max-w-[13.4rem] max-w-[12rem] w-full xl:group-hover:scale-[0.9] transition duration-300 ease-linear">
-                                <img className="w-full h-full object-cover" src="/images/logoHD.png" alt="" />
+                        <Link className="group relative flex justify-center items-center z-[2]" href="/">
+                            <picture className="relative block xl:max-w-[13.4rem] max-w-[12rem] w-full xl:group-hover:scale-[0.9] transition duration-300 ease-linear">
+                                <img className="object-cover w-full h-full" src="/images/logoHD.png" alt="" />
                             </picture>
                         </Link>
                         <ul className="xl:flex mx-[-0.4rem] h-full hidden">
@@ -146,8 +145,8 @@ export default function Header() {
                                                 {menu.title}
                                                 {
                                                     menu.dropdown && (
-                                                        <span className="flex justify-center items-center  w-[1.6rem] h-[1.6rem]">
-                                                            <Image width={100} height={100} layout="responsive" className="w-full h-full object-cover transition duration-300 ease-linear xl:group-hover:rotate-[-180deg]" src="/images/arrDown.svg" alt="" />
+                                                        <span className="relative flex justify-center items-center  w-[1.6rem] h-[1.6rem]">
+                                                            <Image fill  className="  object-cover transition duration-300 ease-linear xl:group-hover:rotate-[-180deg]" src="/images/arrDown.svg" alt="" />
                                                         </span>
                                                     )
                                                 }
@@ -174,13 +173,13 @@ export default function Header() {
                         <div className="flex sm:gap-x-[0.8rem] gap-x-[0.4rem]  ">
                             <div className="relative flex flex-col justify-center">
                                 <div className="langTitle group peer flex items-center sm:gap-x-[1.2rem] gap-x-[0.6rem] sm:px-[1.2rem] px-[1rem] py-[0.8rem] rounded-[4rem] border-2 border-[#e1e2e2] bg-[#e8e9e9] cursor-pointer">
-                                    <picture className="w-[2.4rem] h-[2.4rem] rounded-[50%] block shrink-0">
-                                        <Image width={100} height={100} src="/images/vi.png" layout="responsive" alt="" className="w-full h-full object-cover" />
+                                    <picture className="w-[2.4rem] h-[2.4rem] relative rounded-[50%] block shrink-0">
+                                        <Image fill src="/images/vi.png" alt="" className="object-cover" />
                                     </picture>
                                     <div className="flex items-center gap-x-[0.4rem]">
                                         <p className="uppercase text-[1.4rem] leading-1">VI</p>
-                                        <span className="w-[1.6rem] h-[1.6rem] block shrink-0">
-                                            <Image width={100} height={100} layout="responsive" className="w-full h-full object-cover transition duration-300 ease-linear group-hover:rotate-[-180deg]" src="/images/arrDown.svg" alt="" />
+                                        <span className="w-[1.6rem] h-[1.6rem] block shrink-0 relative">
+                                            <Image fill className="object-cover transition duration-300 ease-linear group-hover:rotate-[-180deg]" src="/images/arrDown.svg" alt="" />
                                         </span>
                                     </div>
                                 </div>
@@ -188,7 +187,7 @@ export default function Header() {
                                     <li className="border-b border-gray-200">
                                         <a className="p-[1.2rem] font-[500] uppercase bg-white transition duration-300 ease-linear text-[1.6rem] flex items-center justify-center text-nowrap gap-x-[0.8rem] xl:hover:bg-[var(--cl-pri)] xl:hover:text-white" href="">
                                             <span className="w-[2.4rem] h-[2.4rem] rounded-[50%] block shrink-0">
-                                                <Image width={100} height={100} src="/images/en.png" layout="responsive" alt="" className="w-full h-full object-cover" />
+                                                <Image fill src="/images/en.png"  alt="" className=" object-cover" />
                                             </span>
                                             EN
                                         </a>
@@ -216,14 +215,14 @@ export default function Header() {
                 <div className={`xl:hidden transition duration-800 ease-initial translate-x-[-100%] opacity-0 pointer-events-none  block fixed sm:w-[35rem] w-full bg-white h-[100dvh] top-0 left-0 z-[1002] ${isOpen && "translate-x-[0%] opacity-100 !pointer-events-auto"} `}>
                     <div ref={menuWrap} className="flex flex-col justify-between  gap-y-[2.4rem] px-[2.4rem] py-[2.8rem] h-full">
                         <button onClick={handleCloseMenuMb} className="w-[2.8rem] h-[2.8rem] flex items-center justify-center absolute top-0 right-0 bg-red-600">
-                            <Image width={100} height={100} src="/images/close.png" alt="" className="w-[80%] h-[80%] object-cover transition duration-300 ease-linear" />
+                            <Image width={200} height={200} src="/images/close.png" alt="" className="w-[80%] h-[80%] object-cover transition duration-300 ease-linear" />
                         </button>
                         <div className="flex flex-col gap-y-[2.4rem]">
                             <div ref={menuLogoMb} className="menu-mb-logo">
                                 <Link className="group flex justify-center items-center relative z-[2]" href="/">
-                                    <picture className="xl:max-w-[13.4rem] max-w-[12rem] w-full xl:group-hover:scale-[0.9] transition duration-300 ease-linear">
-                                        <img className="w-full h-full object-cover" src="/images/logoHD.png" alt="" />
-                                    </picture>
+                                    <div className="xl:max-w-[13.4rem] max-w-[12rem] w-full xl:group-hover:scale-[0.9] transition duration-300 ease-linear">
+                                        <Image fill className="object-cover" src="/images/logoHD.png" alt="" />
+                                    </div>
                                 </Link>
                             </div>
                             <div className="menu-mobi-nav">
@@ -239,7 +238,7 @@ export default function Header() {
                                                                 <span className={`flex justify-center items-center  w-[1.6rem] h-[1.6rem] transition duration-300 ease-linear ${isActived[index] ? "rotate-[180deg]" : ""}`} onClick={(e: React.DragEvent<HTMLDivElement>) => {
                                                                     handleDropDownMb(e, index)
                                                                 }}>
-                                                                    <Image width={100} height={100} layout="responsive" className={`w-full h-full object-cover transition duration-300 ease-linear xl:group-hover:rotate-[-180deg] ${pathname === menu.href && "filter-white "}`} src="/images/arrDown.svg" alt="" />
+                                                                    <Image fill className={`object-cover transition duration-300 ease-linear xl:group-hover:rotate-[-180deg] ${pathname === menu.href && "filter-white "}`} src="/images/arrDown.svg" alt="" />
                                                                 </span>
                                                             )
                                                         }

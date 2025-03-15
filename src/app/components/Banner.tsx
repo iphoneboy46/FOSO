@@ -5,10 +5,10 @@ export default function Banner() {
         <div className="xl:pt-[2.4rem] pt-0 pb-[4rem] relative">
 
             <picture className="xl:block hidden w-[28.2rem] h-[28.2rem] absolute top-[50%] left-0 translate-y-[-50%] nhungNhay">
-                <img alt="" src="../../../images/bntt1.png" className="w-full h-full object-cover" />
+                <img alt="" src="/images/bntt1.png" className="w-full h-full object-cover" />
             </picture>
             <picture className="xl:block hidden w-[28.2rem] h-[28.2rem] absolute top-[50%] right-0 translate-y-[-50%] nhungNhay2">
-                <img alt="" src="../../../images/bntt2.png" className="w-full h-full object-cover" />
+                <img alt="" src="/images/bntt2.png" className="w-full h-full object-cover" />
             </picture>
             <div className="container">
                 <div className="flex flex-col pt-[4.8rem] pb-[1.6rem] xl:gap-y-[8rem] gap-y-[4rem] ">

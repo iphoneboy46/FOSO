@@ -14,7 +14,7 @@ type Category = {
     id: string;
     title: string;
     link: string;
-    children: Category[]; // Định nghĩa kiểu đệ quy cho danh mục con
+    children: Category[];
 };
 
 const cates: Category[] = [
@@ -167,7 +167,7 @@ export default function BlogsPageCt() {
     const [isActived, setIsActived] = useState<string>("");
     const [isOpen, setIsOpen] = useState<boolean>(true);
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
-    
+
     const router = useRouter();
 
     useEffect(() => {
@@ -185,13 +185,13 @@ export default function BlogsPageCt() {
     }, [router]);
 
     useEffect(() => {
-        const handleScroll = () =>{
+        const handleScroll = () => {
             const contentPost = document.getElementById("contentPost");
-            if(window.screen.width < 1024){
-                if(contentPost){
-                    if(window.scrollY > contentPost?.clientHeight){
+            if (window.screen.width < 1024) {
+                if (contentPost) {
+                    if (window.scrollY > contentPost?.clientHeight) {
                         setIsScrolled(true)
-                    }else{
+                    } else {
                         setIsScrolled(false)
                     }
                 }
@@ -201,10 +201,10 @@ export default function BlogsPageCt() {
 
         window.addEventListener('scroll', handleScroll)
 
-        return () =>{
+        return () => {
             window.removeEventListener("scroll", handleScroll)
         }
-    },[])
+    }, [])
 
     const handleChangeCate = (e: MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault(); // Ngăn chặn load lại trang
@@ -224,20 +224,23 @@ export default function BlogsPageCt() {
             window.scrollTo({ top: offsetTop, behavior: "smooth" });
         }
 
-        if(window.screen.width < 1024){
+        if (window.screen.width < 1024) {
             $(`.boxCate`).slideUp();
+            setIsOpen(!isOpen);
+
         }
     };
 
-    useEffect(()=>{
-        if(window.screen.width < 1024){
-            setIsOpen(true)
+    useEffect(() => {
+        if (window.screen.width < 1024) {
+            setIsOpen(false)
+
         }
-    },[])
+    }, [])
 
 
 
-    const handleToggleCate = () =>{
+    const handleToggleCate = () => {
         $(`.boxCate`).slideToggle();
         setIsOpen(!isOpen);
     }
@@ -709,7 +712,7 @@ export default function BlogsPageCt() {
                                     <div onClick={handleToggleCate} className="flex justify-between items-center gap-x-[1.2rem] cursor-pointer">
                                         <h2 className="lg:text-[2.4rem] md:text-[2rem] text-[1.6rem] text-[#050505] lg:font-extrabold font-[600]">Nội dung bài viết</h2>
                                         <span className="flex justify-center items-center  w-[2.4rem] h-[2.4rem]">
-                                            <Image width={100} height={100}  className={`w-full h-full object-cover transition duration-300 ease-linear  ${isOpen && "rotate-[-180deg]"}`} src="/images/arrDown.svg" alt="" />
+                                            <Image width={100} height={100} className={`w-full h-full object-cover transition duration-300 ease-linear  ${isOpen && "rotate-[-180deg]"}`} src="/images/arrDown.svg" alt="" />
                                         </span>
                                     </div>
                                     <ul className="boxCate lg:flex hidden flex-col lg:gap-y-[0.8rem] gap-y-[0.4rem] lg:max-h-none max-h-[30svh] overflow-y-auto">
@@ -728,7 +731,7 @@ export default function BlogsPageCt() {
                                                                     cate.children.map((child, indexChild) => {
                                                                         return (
                                                                             <li key={indexChild} className="flex flex-col gap-y-[0.8rem]">
-                                                                                <Link onClick={(e) => { handleChangeCate(e) ; setIsActived(child.id) }} className={`lg:text-[1.8rem] text-[1.6rem] py-[0.4rem] text-[33404A] transition duration-300 ease-linear xl:hover:text-[var(--cl-pri)] ${isActived === child.id && "text-[var(--cl-pri)] font-[700]"}`} href={child.link}>
+                                                                                <Link onClick={(e) => { handleChangeCate(e); setIsActived(child.id) }} className={`lg:text-[1.8rem] text-[1.6rem] py-[0.4rem] text-[33404A] transition duration-300 ease-linear xl:hover:text-[var(--cl-pri)] ${isActived === child.id && "text-[var(--cl-pri)] font-[700]"}`} href={child.link}>
                                                                                     {child.title}
                                                                                 </Link>
                                                                             </li>

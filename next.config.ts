@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  reactStrictMode: true, // Bật chế độ Strict Mode để bắt lỗi tốt hơn
   async redirects() {
     return [
       {

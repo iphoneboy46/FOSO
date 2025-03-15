@@ -126,12 +126,6 @@ main {}
     filter: brightness(0) saturate(100%) invert(100%) sepia(14%) saturate(1488%) hue-rotate(181deg) brightness(110%) contrast(100%);
 }
 
-.langTitle:hover~ul {
-    opacity: 1;
-    transform: translateY(-10%) !important;
-    visibility: visible;
-}
-
 @media screen and (max-width: 1400px) {
     .d-wrap {
         margin-left: -1.4rem;
@@ -140,6 +134,22 @@ main {}
     .d-item {
         padding-left: 1.4rem;
         padding-right: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+     :root {
+        --size-hd: 8rem;
+    }
+    .langTitle:hover~ul {
+        opacity: 1;
+        transform: translateY(-10%) !important;
+        visibility: visible;
+    }
+    .langTitle~ul:hover {
+        opacity: 1;
+        transform: translateY(-10%) !important;
+        visibility: visible;
     }
 }
 
@@ -197,12 +207,6 @@ main {}
     }
     .d-3 {
         width: 100% !important;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-     :root {
-        --size-hd: 8rem;
     }
 }
 
