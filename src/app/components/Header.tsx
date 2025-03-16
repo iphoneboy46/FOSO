@@ -185,12 +185,12 @@ export default function Header() {
                                 </div>
                                 <ul className="flex flex-col min-w-[5rem] w-full absolute top-[100%] left-[0] bg-white shadow-sm translate-y-[10%] opacity-0 invisible transition duration-300 ease-linear before:content-[''] before:absolute before:w-[100%] before:h-[4rem] before:top-[-3rem] before:bg-transparent xl:peer-hover:translate-y-[0%] xl:peer-hover:opacity-100 xl:peer-hover:visible hover:opacity-100 hover:translate-y-[0%] hover:visible">
                                     <li className="border-b border-gray-200">
-                                        <a className="p-[1.2rem] font-[500] uppercase bg-white transition duration-300 ease-linear text-[1.6rem] flex items-center justify-center text-nowrap gap-x-[0.8rem] xl:hover:bg-[var(--cl-pri)] xl:hover:text-white" href="">
-                                            <span className="w-[2.4rem] h-[2.4rem] rounded-[50%] block shrink-0">
+                                        <Link className="p-[1.2rem] font-[500] uppercase bg-white transition duration-300 ease-linear text-[1.6rem] flex items-center justify-center text-nowrap gap-x-[0.8rem] xl:hover:bg-[var(--cl-pri)] xl:hover:text-white" href="">
+                                            <span className="w-[2.4rem] h-[2.4rem] relative rounded-[50%] block shrink-0">
                                                 <Image fill src="/images/en.png"  alt="" className=" object-cover" />
                                             </span>
                                             EN
-                                        </a>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
