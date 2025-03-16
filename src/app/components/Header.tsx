@@ -235,7 +235,7 @@ export default function Header() {
                                                         {menu.title}
                                                         {
                                                             menu.dropdown && (
-                                                                <span className={`flex justify-center items-center  w-[1.6rem] h-[1.6rem] transition duration-300 ease-linear ${isActived[index] ? "rotate-[180deg]" : ""}`} onClick={(e: React.DragEvent<HTMLDivElement>) => {
+                                                                <span className={`flex relative justify-center items-center  w-[1.6rem] h-[1.6rem] transition duration-300 ease-linear ${isActived[index] ? "rotate-[180deg]" : ""}`} onClick={(e: React.DragEvent<HTMLDivElement>) => {
                                                                     handleDropDownMb(e, index)
                                                                 }}>
                                                                     <Image fill className={`object-cover transition duration-300 ease-linear xl:group-hover:rotate-[-180deg] ${pathname === menu.href && "filter-white "}`} src="/images/arrDown.svg" alt="" />
