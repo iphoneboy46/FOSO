@@ -39,7 +39,7 @@ export default function Post({ image, cate, title, link }:PostProps) {
                 <a className="linkMore group md:text-[1.8rem] text-[1.6rem]  font-[600] text-[#667F93] flex items-center gap-x-[0.4rem]" href={link}>
                     Khám phá thêm
                     <span className="flex justify-center items-center  w-[2.4rem] h-[2.4rem]">
-                        <Image width={100} height={100} className="w-full h-full mt-[0.1rem] object-cover transition duration-100 ease-linear xl:group-hover:f" src="/images/pic3.svg" alt="" />
+                        <Image width={80} height={80} className=" mt-[0.1rem] object-cover transition duration-100 ease-linear xl:group-hover:f" src="/images/pic3.svg" alt="" />
                     </span>
                 </a>
             </div>

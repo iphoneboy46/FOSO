@@ -126,7 +126,7 @@ export default function Header() {
 
     return (
         <>
-            <header className={`bg-white shadow-md transition z-[1000] duration-200 ease-linear rounded-0 translate-x-0  translate-y-0 l-0 top-0 fixed xl:w-[128rem] w-full xl:translate-y-[2.4rem] xl:left-[50%] xl:translate-x-[-50%]  xl:rounded-[4rem]  ${isScrolled && "!w-full !rounded-[0] !translate-y-0 "}`}>
+            <header className={`bg-white shadow-md transition z-[1000] duration-500 ease-linear rounded-0 translate-x-0  translate-y-0 l-0 top-0 fixed xl:w-[128rem] w-full xl:translate-y-[2.4rem] xl:left-[50%] xl:translate-x-[-50%]  xl:rounded-[4rem]  ${isScrolled && "!w-full !rounded-[0] !translate-y-0 "}`}>
                 <div className="container">
                     <div className="xl:w-fit mx-auto flex justify-between xl:gap-x-[6.4rem] gap-x-[2.4rem] h-[8rem] w-full">
 

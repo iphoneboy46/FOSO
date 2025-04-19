@@ -614,17 +614,17 @@ export default function BlogsPageCt() {
                                         Đồng thời, trên đây là các yếu tố tạo nên sự thành công nhưng cũng là các lưu ý cho mỗi doanh nghiệp cần nắm bắt trước khi bắt tay vào triển khai quy trình 5S vào doanh nghiệp của mình. Và với những thông tin bổ ích như trên, FOSO mong rằng phần nào giúp được doanh nghiệp của bạn phát triển, cải tiến vượt bậc trong tương lai.
                                     </p>
                                 </div>
-                                <div className="flex flex-col xl:mt-[4rem] mt-[2rem] p-[2.4rem] shadow-md bg-white rounded-[2.4rem] gap-y-[2.4rem]">
+                                <div className="flex flex-col xl:mt-[4rem] mt-[2rem] lg:p-[2.4rem] md:p-[2rem] p-[1.6rem] shadow-md bg-white rounded-[2.4rem] gap-y-[2.4rem]">
                                     <div className="flex flex-col items-center gap-y-[0.4rem]">
                                         <h2 className="text-[#33404A] text-center font-[700] text-[2rem]">
                                             Bạn thấy bài viết như thế nào?
                                         </h2>
                                         <p className="text-center text-[#33404A] font-[500]">4 phản hồi</p>
                                     </div>
-                                    <div className="max-w-[70rem] w-full  m-auto">
+                                    <div className="lg:max-w-[70rem] w-full  m-auto">
                                         <ul className="d-wrap gap-y-[2.4rem]">
-                                            <li className="d-6 d-item">
-                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] px-[2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
+                                            <li className="md:w-[calc(100%*2/12)] w-[calc(100%*4/12)]  d-item">
+                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] lg:px-[2rem] md:px-[1.6rem] px-[1.2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
                                                     <picture className="w-[4.8rem] h-[4.8rem] block mx-auto">
                                                         <img className="w-full h-full object-cover" src="/images/dgic1.png" alt="" />
                                                     </picture>
@@ -636,8 +636,8 @@ export default function BlogsPageCt() {
                                                     </p>
                                                 </div>
                                             </li>
-                                            <li className="d-6 d-item">
-                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] px-[2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
+                                            <li className="md:w-[calc(100%*2/12)] w-[calc(100%*4/12)]  d-item">
+                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] lg:px-[2rem] md:px-[1.6rem] px-[1.2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
                                                     <picture className="w-[4.8rem] h-[4.8rem] block mx-auto">
                                                         <img className="w-full h-full object-cover" src="/images/dgic2.png" alt="" />
                                                     </picture>
@@ -649,8 +649,8 @@ export default function BlogsPageCt() {
                                                     </p>
                                                 </div>
                                             </li>
-                                            <li className="d-6 d-item">
-                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] px-[2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
+                                            <li className="md:w-[calc(100%*2/12)] w-[calc(100%*4/12)]  d-item">
+                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] lg:px-[2rem] md:px-[1.6rem] px-[1.2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
                                                     <picture className="w-[4.8rem] h-[4.8rem] block mx-auto">
                                                         <img className="w-full h-full object-cover" src="/images/dgic3.png" alt="" />
                                                     </picture>
@@ -662,8 +662,8 @@ export default function BlogsPageCt() {
                                                     </p>
                                                 </div>
                                             </li>
-                                            <li className="d-6 d-item">
-                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] px-[2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
+                                            <li className="md:w-[calc(100%*2/12)] w-[calc(100%*4/12)]  d-item">
+                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] lg:px-[2rem] md:px-[1.6rem] px-[1.2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
                                                     <picture className="w-[4.8rem] h-[4.8rem] block mx-auto">
                                                         <img className="w-full h-full object-cover" src="/images/dgic4.png" alt="" />
                                                     </picture>
@@ -675,8 +675,8 @@ export default function BlogsPageCt() {
                                                     </p>
                                                 </div>
                                             </li>
-                                            <li className="d-6 d-item">
-                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] px-[2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
+                                            <li className="md:w-[calc(100%*2/12)] w-[calc(100%*4/12)]  d-item">
+                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] lg:px-[2rem] md:px-[1.6rem] px-[1.2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
                                                     <picture className="w-[4.8rem] h-[4.8rem] block mx-auto">
                                                         <img className="w-full h-full object-cover" src="/images/dgic5.png" alt="" />
                                                     </picture>
@@ -688,8 +688,8 @@ export default function BlogsPageCt() {
                                                     </p>
                                                 </div>
                                             </li>
-                                            <li className="d-6 d-item">
-                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] px-[2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
+                                            <li className="md:w-[calc(100%*2/12)] w-[calc(100%*4/12)]  d-item">
+                                                <div className="group flex flex-col items-center cursor-pointer rounded-[0.4rem] gap-y-[0.4rem] py-[0.8rem] lg:px-[2rem] md:px-[1.6rem] px-[1.2rem] border-[0.1rem] border-transparent transition duration-300 ease-linear xl:hover:!border-[#10805B]">
                                                     <picture className="w-[4.8rem] h-[4.8rem] block mx-auto">
                                                         <img className="w-full h-full object-cover" src="/images/dgic6.png" alt="" />
                                                     </picture>
