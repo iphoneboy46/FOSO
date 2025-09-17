@@ -213,16 +213,16 @@ export default function Header() {
             </header>
             <div className="menu-mb">
                 <div className={`xl:hidden transition duration-800 ease-initial translate-x-[-100%] opacity-0 pointer-events-none  block fixed sm:w-[35rem] w-full bg-white h-[100dvh] top-0 left-0 z-[1002] ${isOpen && "translate-x-[0%] opacity-100 !pointer-events-auto"} `}>
-                    <div ref={menuWrap} className="flex flex-col justify-between  gap-y-[2.4rem] px-[2.4rem] py-[2.8rem] h-full">
+                    <div ref={menuWrap} className="flex flex-col justify-between  gap-y-[2.4rem] px-[1.6rem] py-[2.8rem] h-full">
                         <button onClick={handleCloseMenuMb} className="w-[2.8rem] h-[2.8rem] flex items-center justify-center absolute top-0 right-0 bg-red-600">
-                            <Image width={200} height={200} src="/images/close.png" alt="" className="w-[80%] h-[80%] object-cover transition duration-300 ease-linear" />
+                            <Image width={200} height={200} src="/images/close.png" alt="iconSearch" className="w-[80%] h-[80%] object-cover transition duration-300 ease-linear" />
                         </button>
                         <div className="flex flex-col gap-y-[2.4rem]">
                             <div ref={menuLogoMb} className="menu-mb-logo">
                                 <Link className="group flex justify-center items-center relative z-[2]" href="/">
-                                    <div className="xl:max-w-[13.4rem] max-w-[12rem] w-full xl:group-hover:scale-[0.9] transition duration-300 ease-linear">
-                                        <Image fill className="object-cover" src="/images/logoHD.png" alt="" />
-                                    </div>
+                                    <span className="max-w-[14rem] w-full  xl:group-hover:scale-[0.9] transition duration-300 ease-linear relative block h-auto">
+                                        <Image width={100} height={100}  className="object-cover w-full h-full" src="/images/logoHD.png" alt="logo" />
+                                    </span>
                                 </Link>
                             </div>
                             <div className="menu-mobi-nav">
